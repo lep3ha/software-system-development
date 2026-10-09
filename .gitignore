@@ -1,0 +1,15 @@
+# Build output
+build/
+
+# Generated Doxygen HTML
+**/doc/html/
+
+# IDE settings
+.vscode/
+.idea/
+
+# macOS metadata
+.DS_Store
+
+# Packaged archives
+*.zip
