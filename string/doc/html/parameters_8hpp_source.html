@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Приложение моделирования колебаний упругой струны: Исходный файл src/parameters.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Приложение моделирования колебаний упругой струны<span id="projectnumber">&#160;0.9</span>
+   </div>
+   <div id="projectbrief">Изучение архитектуры приложения</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('parameters_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">parameters.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="parameters_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef PARAMETERS_HPP</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define PARAMETERS_HPP</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceso.html">so</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespaceso.html#a1618b3cbaefb123940987840a6eba806">   17</a></span>  <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespaceso.html#a1618b3cbaefb123940987840a6eba806">string_length</a> = 1.;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespaceso.html#a4e18f65ff504804da157a7f888e43a87">   20</a></span>  <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespaceso.html#a4e18f65ff504804da157a7f888e43a87">phase_velocity</a> = 1.;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespaceso.html#a0f4700433f09948d09e6fcf3815b34ce">   23</a></span>  <span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespaceso.html#a0f4700433f09948d09e6fcf3815b34ce">BoundaryType</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespaceso.html#a0f4700433f09948d09e6fcf3815b34cea8b04d5e3775d298e78455efc5ca404d5">   24</a></span>    <a class="code hl_enumvalue" href="namespaceso.html#a0f4700433f09948d09e6fcf3815b34cea8b04d5e3775d298e78455efc5ca404d5">first</a>, </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespaceso.html#a0f4700433f09948d09e6fcf3815b34ceaa9f0e61a137d86aa9db53465e0801612">   25</a></span>    <a class="code hl_enumvalue" href="namespaceso.html#a0f4700433f09948d09e6fcf3815b34ceaa9f0e61a137d86aa9db53465e0801612">second</a> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  };</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structso_1_1_boundary.html">   29</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structso_1_1_boundary.html">Boundary</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structso_1_1_boundary.html#a319c3ac89ca9ea11b01b8566ad147324">   30</a></span>    <a class="code hl_enumeration" href="namespaceso.html#a0f4700433f09948d09e6fcf3815b34ce">BoundaryType</a> <a class="code hl_variable" href="structso_1_1_boundary.html#a319c3ac89ca9ea11b01b8566ad147324">type</a>; </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structso_1_1_boundary.html#a23b027baa52af6c1662b9597bdf053f1">   31</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structso_1_1_boundary.html#a23b027baa52af6c1662b9597bdf053f1">value</a>;      </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  };</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structso_1_1_conditions.html">   35</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structso_1_1_conditions.html">Conditions</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structso_1_1_conditions.html#acce9339fdd9b65960e0ba3c642620ab9">   36</a></span>    std::function&lt;double(<span class="keywordtype">double</span>, <span class="keywordtype">double</span>)&gt; <a class="code hl_variable" href="structso_1_1_conditions.html#acce9339fdd9b65960e0ba3c642620ab9">force</a>; </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structso_1_1_conditions.html#a922ecb4329cc5d7a22b2ef19675ede2e">   37</a></span>    std::function&lt;double(<span class="keywordtype">double</span>)&gt; <a class="code hl_variable" href="structso_1_1_conditions.html#a922ecb4329cc5d7a22b2ef19675ede2e">begin</a>;         </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structso_1_1_conditions.html#aaf3184a573333f57d98fd4c5e69d8e20">   38</a></span>    <a class="code hl_struct" href="structso_1_1_boundary.html">Boundary</a> <a class="code hl_variable" href="structso_1_1_conditions.html#aaf3184a573333f57d98fd4c5e69d8e20">left</a>;                               </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structso_1_1_conditions.html#a1be74073a7254e5b4303a7a01b0639ff">   39</a></span>    <a class="code hl_struct" href="structso_1_1_boundary.html">Boundary</a> <a class="code hl_variable" href="structso_1_1_conditions.html#a1be74073a7254e5b4303a7a01b0639ff">right</a>;                              </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  };</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structso_1_1_parameters.html">   43</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structso_1_1_parameters.html">Parameters</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structso_1_1_parameters.html#a25da0af16d6f73aa5b55bf4d9247ed18">   44</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structso_1_1_parameters.html#a25da0af16d6f73aa5b55bf4d9247ed18">duration</a>;         </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structso_1_1_parameters.html#a00b64bfb80c1b6100d5b1ae16f19a38d">   45</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structso_1_1_parameters.html#a00b64bfb80c1b6100d5b1ae16f19a38d">spatial_step</a>;     </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structso_1_1_parameters.html#a624a93362fa6926ee507eab307c59275">   46</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structso_1_1_parameters.html#a624a93362fa6926ee507eab307c59275">no_output</a>;          </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structso_1_1_parameters.html#aca0ae63c1ed76796de8679dc0f165814">   47</a></span>    std::string <a class="code hl_variable" href="structso_1_1_parameters.html#aca0ae63c1ed76796de8679dc0f165814">output_file</a>; </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structso_1_1_parameters.html#ae5b66b04e92ce96592857b4c5ee2d15a">   48</a></span>    <a class="code hl_struct" href="structso_1_1_conditions.html">Conditions</a> <a class="code hl_variable" href="structso_1_1_parameters.html#ae5b66b04e92ce96592857b4c5ee2d15a">conditions</a>;   </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  };</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>} <span class="comment">// so namespace</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">// PARAMETERS_HPP</span></div>
+<div class="ttc" id="anamespaceso_html"><div class="ttname"><a href="namespaceso.html">so</a></div><div class="ttdoc">Пространство имён приложения моделирования колебаний струны.</div><div class="ttdef"><b>Определения</b> abstract_solver.hpp:15</div></div>
+<div class="ttc" id="anamespaceso_html_a0f4700433f09948d09e6fcf3815b34ce"><div class="ttname"><a href="namespaceso.html#a0f4700433f09948d09e6fcf3815b34ce">so::BoundaryType</a></div><div class="ttdeci">BoundaryType</div><div class="ttdoc">Типы граничных условий.</div><div class="ttdef"><b>Определения</b> parameters.hpp:23</div></div>
+<div class="ttc" id="anamespaceso_html_a0f4700433f09948d09e6fcf3815b34cea8b04d5e3775d298e78455efc5ca404d5"><div class="ttname"><a href="namespaceso.html#a0f4700433f09948d09e6fcf3815b34cea8b04d5e3775d298e78455efc5ca404d5">so::BoundaryType::first</a></div><div class="ttdeci">@ first</div><div class="ttdoc">Первого рода.</div><div class="ttdef"><b>Определения</b> parameters.hpp:24</div></div>
+<div class="ttc" id="anamespaceso_html_a0f4700433f09948d09e6fcf3815b34ceaa9f0e61a137d86aa9db53465e0801612"><div class="ttname"><a href="namespaceso.html#a0f4700433f09948d09e6fcf3815b34ceaa9f0e61a137d86aa9db53465e0801612">so::BoundaryType::second</a></div><div class="ttdeci">@ second</div><div class="ttdoc">Второго рода.</div><div class="ttdef"><b>Определения</b> parameters.hpp:25</div></div>
+<div class="ttc" id="anamespaceso_html_a1618b3cbaefb123940987840a6eba806"><div class="ttname"><a href="namespaceso.html#a1618b3cbaefb123940987840a6eba806">so::string_length</a></div><div class="ttdeci">const double string_length</div><div class="ttdoc">Глобальная константа с длиной струны, м.</div><div class="ttdef"><b>Определения</b> parameters.hpp:17</div></div>
+<div class="ttc" id="anamespaceso_html_a4e18f65ff504804da157a7f888e43a87"><div class="ttname"><a href="namespaceso.html#a4e18f65ff504804da157a7f888e43a87">so::phase_velocity</a></div><div class="ttdeci">const double phase_velocity</div><div class="ttdoc">Глобальная константа с фазовой скоростью, м/с.</div><div class="ttdef"><b>Определения</b> parameters.hpp:20</div></div>
+<div class="ttc" id="astructso_1_1_boundary_html"><div class="ttname"><a href="structso_1_1_boundary.html">so::Boundary</a></div><div class="ttdoc">Структура описания граничного условия.</div><div class="ttdef"><b>Определения</b> parameters.hpp:29</div></div>
+<div class="ttc" id="astructso_1_1_boundary_html_a23b027baa52af6c1662b9597bdf053f1"><div class="ttname"><a href="structso_1_1_boundary.html#a23b027baa52af6c1662b9597bdf053f1">so::Boundary::value</a></div><div class="ttdeci">double value</div><div class="ttdoc">Значение.</div><div class="ttdef"><b>Определения</b> parameters.hpp:31</div></div>
+<div class="ttc" id="astructso_1_1_boundary_html_a319c3ac89ca9ea11b01b8566ad147324"><div class="ttname"><a href="structso_1_1_boundary.html#a319c3ac89ca9ea11b01b8566ad147324">so::Boundary::type</a></div><div class="ttdeci">BoundaryType type</div><div class="ttdoc">Тип.</div><div class="ttdef"><b>Определения</b> parameters.hpp:30</div></div>
+<div class="ttc" id="astructso_1_1_conditions_html"><div class="ttname"><a href="structso_1_1_conditions.html">so::Conditions</a></div><div class="ttdoc">Структура с начальным и граничными условиями моделирования.</div><div class="ttdef"><b>Определения</b> parameters.hpp:35</div></div>
+<div class="ttc" id="astructso_1_1_conditions_html_a1be74073a7254e5b4303a7a01b0639ff"><div class="ttname"><a href="structso_1_1_conditions.html#a1be74073a7254e5b4303a7a01b0639ff">so::Conditions::right</a></div><div class="ttdeci">Boundary right</div><div class="ttdoc">Граничное условие для правого конца.</div><div class="ttdef"><b>Определения</b> parameters.hpp:39</div></div>
+<div class="ttc" id="astructso_1_1_conditions_html_a922ecb4329cc5d7a22b2ef19675ede2e"><div class="ttname"><a href="structso_1_1_conditions.html#a922ecb4329cc5d7a22b2ef19675ede2e">so::Conditions::begin</a></div><div class="ttdeci">std::function&lt; double(double)&gt; begin</div><div class="ttdoc">Начальные условия.</div><div class="ttdef"><b>Определения</b> parameters.hpp:37</div></div>
+<div class="ttc" id="astructso_1_1_conditions_html_aaf3184a573333f57d98fd4c5e69d8e20"><div class="ttname"><a href="structso_1_1_conditions.html#aaf3184a573333f57d98fd4c5e69d8e20">so::Conditions::left</a></div><div class="ttdeci">Boundary left</div><div class="ttdoc">Граничное условие для левого конца.</div><div class="ttdef"><b>Определения</b> parameters.hpp:38</div></div>
+<div class="ttc" id="astructso_1_1_conditions_html_acce9339fdd9b65960e0ba3c642620ab9"><div class="ttname"><a href="structso_1_1_conditions.html#acce9339fdd9b65960e0ba3c642620ab9">so::Conditions::force</a></div><div class="ttdeci">std::function&lt; double(double, double)&gt; force</div><div class="ttdoc">Внешняя сила p(x, t).</div><div class="ttdef"><b>Определения</b> parameters.hpp:36</div></div>
+<div class="ttc" id="astructso_1_1_parameters_html"><div class="ttname"><a href="structso_1_1_parameters.html">so::Parameters</a></div><div class="ttdoc">Служебная структура с параметрами моделирования.</div><div class="ttdef"><b>Определения</b> parameters.hpp:43</div></div>
+<div class="ttc" id="astructso_1_1_parameters_html_a00b64bfb80c1b6100d5b1ae16f19a38d"><div class="ttname"><a href="structso_1_1_parameters.html#a00b64bfb80c1b6100d5b1ae16f19a38d">so::Parameters::spatial_step</a></div><div class="ttdeci">double spatial_step</div><div class="ttdoc">Пространственный шаг сетки.</div><div class="ttdef"><b>Определения</b> parameters.hpp:45</div></div>
+<div class="ttc" id="astructso_1_1_parameters_html_a25da0af16d6f73aa5b55bf4d9247ed18"><div class="ttname"><a href="structso_1_1_parameters.html#a25da0af16d6f73aa5b55bf4d9247ed18">so::Parameters::duration</a></div><div class="ttdeci">double duration</div><div class="ttdoc">Продолжительность моделирования.</div><div class="ttdef"><b>Определения</b> parameters.hpp:44</div></div>
+<div class="ttc" id="astructso_1_1_parameters_html_a624a93362fa6926ee507eab307c59275"><div class="ttname"><a href="structso_1_1_parameters.html#a624a93362fa6926ee507eab307c59275">so::Parameters::no_output</a></div><div class="ttdeci">bool no_output</div><div class="ttdoc">Флаг служебного режима без файлового вывода.</div><div class="ttdef"><b>Определения</b> parameters.hpp:46</div></div>
+<div class="ttc" id="astructso_1_1_parameters_html_aca0ae63c1ed76796de8679dc0f165814"><div class="ttname"><a href="structso_1_1_parameters.html#aca0ae63c1ed76796de8679dc0f165814">so::Parameters::output_file</a></div><div class="ttdeci">std::string output_file</div><div class="ttdoc">Название файла для вывода результатов моделирования.</div><div class="ttdef"><b>Определения</b> parameters.hpp:47</div></div>
+<div class="ttc" id="astructso_1_1_parameters_html_ae5b66b04e92ce96592857b4c5ee2d15a"><div class="ttname"><a href="structso_1_1_parameters.html#ae5b66b04e92ce96592857b4c5ee2d15a">so::Parameters::conditions</a></div><div class="ttdeci">Conditions conditions</div><div class="ttdoc">Начальные и граничные условия.</div><div class="ttdef"><b>Определения</b> parameters.hpp:48</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="parameters_8hpp.html">parameters.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>
