@@ -10,6 +10,3 @@ build/
 
 # macOS metadata
 .DS_Store
-
-# Packaged archives
-*.zip
