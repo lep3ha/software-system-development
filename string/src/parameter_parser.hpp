@@ -110,7 +110,7 @@ namespace so {
       parameters.conditions.force = zeroForce;             // harmonicForce
       parameters.conditions.begin = nonZeroBeginCondition; // zeroBeginCondition
       parameters.conditions.left = Boundary{ BoundaryType::first, 0. };
-      parameters.conditions.right = Boundary{ BoundaryType::first, 0. };
+      parameters.conditions.right = Boundary{ BoundaryType::first, 0.01 };
       return parameters;
     }
 
